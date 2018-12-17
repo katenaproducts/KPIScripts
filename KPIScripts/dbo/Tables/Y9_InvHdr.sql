@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[Y9_InvHdr] (
+    [Cust_Inv_num]  VARCHAR (50) NULL,
+    [ShipName]      VARCHAR (50) NULL,
+    [ShipAdd1]      VARCHAR (50) NULL,
+    [ShipAdd2]      VARCHAR (50) NULL,
+    [ShipAdd3]      VARCHAR (50) NULL,
+    [ShipAdd4]      VARCHAR (50) NULL,
+    [OrderNum]      VARCHAR (50) NULL,
+    [OrderDate]     VARCHAR (50) NULL,
+    [ShipDate]      VARCHAR (50) NULL,
+    [InvDate]       VARCHAR (50) NULL,
+    [PO]            VARCHAR (50) NULL,
+    [Salesman]      VARCHAR (50) NULL,
+    [SalesTaxState] VARCHAR (50) NULL,
+    [Carrier]       VARCHAR (50) NULL,
+    [InvAmount]     VARCHAR (50) NULL,
+    [Discount]      VARCHAR (50) NULL,
+    [Tax]           VARCHAR (50) NULL,
+    [Freight]       VARCHAR (50) NULL,
+    [Other]         VARCHAR (50) NULL,
+    [SalesTaxCode]  VARCHAR (50) NULL,
+    [EuroDiscount]  VARCHAR (50) NULL,
+    [ShipToNum]     VARCHAR (50) NULL,
+    [Zip]           VARCHAR (50) NULL,
+    [Region]        VARCHAR (50) NULL
+);
+

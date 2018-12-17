@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[FactSales] (
+    [SalesKey]       INT             IDENTITY (1, 1) NOT NULL,
+    [InvoiceNumber]  VARCHAR (12)    NOT NULL,
+    [InvoiceLine]    VARCHAR (2)     NOT NULL,
+    [DateKey]        INT             NOT NULL,
+    [TimeKey]        INT             NOT NULL,
+    [ItemKey]        INT             NOT NULL,
+    [SalesPersonKey] INT             NOT NULL,
+    [CustomerKey]    INT             NOT NULL,
+    [OrderKey]       INT             NULL,
+    [RMAKey]         INT             NULL,
+    [Cost]           DECIMAL (18, 4) NOT NULL,
+    [Price]          DECIMAL (18, 4) NOT NULL,
+    [Margin]         DECIMAL (18, 4) NOT NULL,
+    [Discount]       DECIMAL (18, 4) NOT NULL,
+    [Quantity]       DECIMAL (18, 4) NOT NULL,
+    [ExtendedPrice]  DECIMAL (18, 4) NOT NULL,
+    [MarginAmount]   DECIMAL (18, 4) NOT NULL,
+    CONSTRAINT [PK_FactSales_SalesKey] PRIMARY KEY CLUSTERED ([SalesKey] ASC),
+    CONSTRAINT [FK_FactSales_CustomerKey_DimCustomer_CustomerKey] FOREIGN KEY ([CustomerKey]) REFERENCES [dbo].[DimCustomer] ([CustomerKey]),
+    CONSTRAINT [FK_FactSales_DateKey_DimDate_DateKey] FOREIGN KEY ([DateKey]) REFERENCES [dbo].[DimDate] ([DateKey]),
+    CONSTRAINT [FK_FactSales_ItemKey_DimItem_ItemKey] FOREIGN KEY ([ItemKey]) REFERENCES [dbo].[DimItem] ([ItemKey]),
+    CONSTRAINT [FK_FactSales_OrderKey_DimOrder_OrderKey] FOREIGN KEY ([OrderKey]) REFERENCES [dbo].[DimOrder] ([OrderKey]),
+    CONSTRAINT [FK_FactSales_RMAKey_DimRMA_RMAKey] FOREIGN KEY ([RMAKey]) REFERENCES [dbo].[DimRMA] ([RMAKey]),
+    CONSTRAINT [FK_FactSales_SalesPersonKey_DimSalesPerson_SalesPersonKey] FOREIGN KEY ([SalesPersonKey]) REFERENCES [dbo].[DimSalesPerson] ([SalesPersonKey]),
+    CONSTRAINT [FK_FactSales_TimeKey_DimTime_TimeKey] FOREIGN KEY ([TimeKey]) REFERENCES [dbo].[DimTime] ([TimeKey])
+);
+

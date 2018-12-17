@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [KATENA\nchughtai]
+    FROM WINDOWS WITH DEFAULT_DATABASE = [KPI_App], DEFAULT_LANGUAGE = [us_english];
+

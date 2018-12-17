@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [KATENA\csidev]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

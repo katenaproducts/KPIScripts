@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[REGION] (
+    [REGION]      NVARCHAR (255) NULL,
+    [REGION_NAME] NVARCHAR (255) NULL
+);
+

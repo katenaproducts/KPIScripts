@@ -1,0 +1,2 @@
+﻿CREATE USER [KATENA\csidev] FOR LOGIN [KATENA\csidev];
+

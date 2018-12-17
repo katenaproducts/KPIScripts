@@ -1,0 +1,2 @@
+﻿CREATE USER [DWUser] FOR LOGIN [DWUser];
+
